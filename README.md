@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🩺 MedStudy AI Pro: Production-Grade Medical RAG Engine
 
 ### 🔗 [Live Demo on Hugging Face Spaces](https://huggingface.co/spaces/AYESHAASS/Medical-RAG-Assistant)
