@@ -35,20 +35,21 @@
        ▼
 [Streamlit UI Rendering] ──► Chat Interface + Verified Fragment Citations
 
+```
 ## 📸 Application Interface
 ![App Demo](screenshot.png)
 
 🚀 Technical Breakthroughs & Infrastructure
-During the development of MedStudy AI Pro, several high-impact cloud infrastructure challenges were systematically engineered away to ensure production stability:
+During the development of MedStudy AI Pro, several high-impact cloud infrastructure challenges were systematically engineered away:
 
 🔒 Zero-Leakage Ephemeral Storage
-Standard vector databases persist data to disk, running a risk of context bleeding across separate user files. This engine decouples document tracking by spinning up an isolated, dynamic, in-memory index tied explicitly to the session state. Uploading a new manuscript instantly flushes memory references, ensuring absolute data privacy.
+Standard vector databases persist data to disk, running a risk of context bleeding across separate user files. This engine decouples document tracking by spinning up an isolated, dynamic, in-memory index.
 
 🌐 Bypassing Iframe 403 Rejections
-Cloud platform dashboards often isolate web frameworks behind <iframe> layers, which can block binary file transport due to Cross-Origin (CORS) policies. This project routes user traffic directly to the raw application container network socket, restoring seamless binary data transport for large medical PDFs.
+Cloud platform dashboards often isolate web frameworks behind <iframe> layers. This project routes user traffic directly to the raw application container network socket.
 
 🧠 Anti-Hallucination Grounding Framework
-To safely handle delicate clinical data, the inference pipeline utilizes a low-temperature constraint (T = 0.1) coupled with deterministic system instructions. The LLM is strictly prohibited from utilizing its pre-trained global weights for factual assertions, forcing it to fall back to a structured refusal string if semantic chunks lack direct factual coverage.
+To safely handle delicate clinical data, the inference pipeline utilizes a low-temperature constraint (T = 0.1) coupled with deterministic system instructions.
 
 🛠️ Deep Tech Stack
 LLM: llama-3.3-70b-versatile via high-speed LPU inference (Groq Cloud).
